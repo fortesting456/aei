@@ -211,14 +211,14 @@ select {
 
 .main-header .overlay {
     position: fixed;
-    background: rgba(0, 0, 0,0.9);
+    background: #323030;
     top: 0;
     right: 0;
     width: 100%;
     height: 0%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .35s, visibility .35s, height .35s;
+    transition: opacity .35s, visibility .35s, width .35s;
     overflow: hidden;
     padding: 25px;
 }
@@ -230,13 +230,14 @@ select {
     opacity: 1;
     visibility: visible;
     height: 100%;
-    max-width: 100%;
+    max-width: 500px;
     overflow: auto;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.9);
 }
-.main-header ul li::after {
+/*.main-header ul li::after {
     content: "";
     background: var(--primary-color);
-    /*opacity: .3;*/
+    !*opacity: .3;*!
     position: absolute;
     bottom: 0;
     left: 0;
@@ -251,7 +252,7 @@ select {
     max-width: 400px;
     width: 100%;
     transition: 0.3s;
-}
+}*/
 .main-header  .overlay.open li {
     animation: fadeInRight .5s ease forwards;
     animation-delay: .35s;
@@ -284,9 +285,12 @@ select {
     margin-bottom: 10px;
     padding: 10px 0 20px 0;
     position: relative;
-    text-align: center;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
-
+.main-header .overlay ul li.dropdown ul li {
+    border-bottom: none;
+}
 .main-header .overlay ul li a {
     color: #fff;
     font-family: "Montserrat",sans-serif;
@@ -756,31 +760,41 @@ ul.footer-link-ul {
 }
 .our-values-card {
     background-color: #ffffff;
-    padding: 40px 50px 50px;
+    padding: 30px;
     height: 100%;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
-    border-radius: 10px;
-    margin: 10px;
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
 }
+
 .ovc-content p {
     font-size: 21px;
     line-height: 1.1904761905;
 }
 .ovc-content h3 {
-    font-size: 32px;
+    font-size: 26px;
     line-height: 1.1875;
     letter-spacing: -.57px;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    font-weight: 700 !important;
 }
-.ovc-content {
-    padding-top: 30px;
-    border-top: 2px solid var(--primary-color);
+.ovc-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+    background-color: var(--lightbg-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 100px;
 }
 .ovc-icon img {
-    max-width: 100px;
-    margin-bottom: 25px;
+    width: 60px;
+    margin: 0;
 }
+
 .our-values-carousel .owl-stage {
     display: flex;
 }
@@ -940,7 +954,10 @@ ul.footer-link-ul {
     color: var(--primary-color)!important;
 }
 .contact-list-div a:hover i {
-    color: #fff;
+    color: #000000;
+}
+.get-touch-section .contact-list-div a:hover i {
+    color: #ffffff!important;
 }
 .project-left-div {
     background-color: var(--dark-color);
@@ -1166,7 +1183,7 @@ ul.footer-link-ul {
 }
 .vacancies-card {
     position: relative;
-    background-color: #fff;
+    background-color: var(--lightbg-color);
     padding: 40px 30px;
     margin-bottom: 0;
     height: 100%;
@@ -1279,6 +1296,22 @@ ul.footer-link-ul {
     justify-content: center;
     border-radius: 50%;
 }
+.page-banner-section .carousel-content {
+    width: 50%;
+    background-color: #f9f9f9;
+    text-align: left;
+    align-items: start;
+}
+.page-banner-section .carousel-div .carousel-content h1 {
+    color: #000000 !important;
+    text-align: left;
+}
+.page-banner-section .carousel-div .carousel-content p {
+    color: #000000 !important;
+}
+.page-banner-section .carousel-div:after {
+    display: none;
+}
 @media (min-width: 769px) {
     .container {
         max-width: 92vw;
@@ -1373,7 +1406,7 @@ ul.footer-link-ul {
         max-width: 80px;
     }
     .ovc-content h3 {
-        font-size: 28px;
+        font-size: 20px;
     }
     .ovc-content p {
         font-size: 16px;
@@ -1494,5 +1527,17 @@ ul.footer-link-ul {
     }
     .banner-section .owl-theme .owl-dots {
         left: 0;
+    }
+    .page-banner-section .carousel-content {
+        width: 100%;
+        height: auto;
+        padding-bottom: 0;
+    }
+    .filter-link-ul {
+        gap: 10px;
+    }
+    .filter-box {
+        gap: 20px;
+        flex-wrap: wrap;
     }
 }
