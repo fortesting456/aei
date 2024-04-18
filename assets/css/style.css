@@ -1,6 +1,7 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 :root {
     --primary-color: #7952b3;
     --secondary-color: #DBDBDB;
@@ -8,7 +9,8 @@
     --lightbg-color: #ececec;
     --primary-font: 'Montserrat', sans-serif;
     /*--secondart-font: 'Volkhov', serif;*/
-    --secondart-font: 'Inter', sans-serif;
+    --secondart-font: "Oswald", sans-serif;;
+    /*--secondart-font: 'Inter', sans-serif;*/
     --section-gradient: linear-gradient(90deg,#0164A7 0%,#1C355E 100%);
 }
 
@@ -286,7 +288,51 @@ select {
     padding: 10px 0 20px 0;
     position: relative;
     text-align: left;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.main-header .overlay ul li a::before {
+    content: "";
+    width: 100%;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+    height: 3px;
+    margin: 0;
+    transition: 0.3s;
+}
+.main-header .overlay ul li a::after {
+    content: "";
+    width: 0;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+    height: 3px;
+    border: none;
+    margin: 0;
+    transition: 0.3s;
+}
+.main-header .overlay ul li a:hover:after {
+    background-color: var(--primary-color);
+    width: 100%;
+    transition: 0.3s;
+}
+.main-header .overlay ul li a.active:after {
+    background-color: var(--primary-color);
+    width: 100%;
+}
+.main-header .overlay ul li.dropdown::after {
+    display: inline-block;
+    content: "";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: rgba(255,255,255,0.2);
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    top: 12px;
 }
 .main-header .overlay ul li.dropdown ul li {
     border-bottom: none;
@@ -323,7 +369,10 @@ select {
     background-color: transparent;
     color: var(--primary-color);
 }
-.main-header ul li .dropdown-menu li:after {
+.main-header .overlay ul li.dropdown ul li:last-child a:before {
+    display: none;
+}
+.main-header .overlay ul li.dropdown ul li:last-child a:after {
     display: none;
 }
 .fixed-header {
@@ -488,14 +537,14 @@ select {
     margin-bottom: 20px;
 }
 .ops-content h2 {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 50px;
+    line-height: 58px;
     letter-spacing: -.94px;
     margin-bottom: 20px;
     /* max-width: 770px; */
 }
 .py-70 {
-    padding: 70px 0;
+    padding: 120px 0;
 }
 .title-h2 {
     font-size: 70px;
@@ -527,7 +576,17 @@ select {
     width: 100%;
     object-fit: cover;
 }
+.main-header .overlay ul li.dropdown ul a {
+    padding-bottom: 15px;
+    font-size: 18px;
 
+}
+.main-header .overlay ul li.dropdown ul li:last-child {
+    margin-bottom: 0;
+}
+.main-header .overlay ul li.dropdown ul {
+    padding-bottom: 0;
+}
 .project-card:hover .project-img img {
     -webkit-transform: scale(1.07);
     -ms-transform: scale(1.07);
@@ -1312,23 +1371,43 @@ ul.footer-link-ul {
 .page-banner-section .carousel-div:after {
     display: none;
 }
-@media (min-width: 769px) {
+.ops-content {
+    max-width: 900px;
+}
+.contact-section {
+    padding: 100px 0;
+    background-color: var(--dark-color);
+    text-align: center;
+}
+.contact-section iframe {
+    background-color: #ffffff;
+    padding: 30px 0;
+    border-radius: 10px;
+    height: 775px;
+    /* height: 100%; */
+    margin-top: 35px;
+}
+.iframe-div {
+    max-width: 700px;
+    margin: auto;
+}
+/*@media (min-width: 769px) {
     .container {
         max-width: 92vw;
     }
-}
-@media screen and (min-width: 1200px) {
+}*/
+/*@media screen and (min-width: 1200px) {
     .container {
         max-width: 1320px;
         width: 100%;
     }
-}
-@media screen and (min-width: 1600px) {
+}*/
+/*@media screen and (min-width: 1600px) {
     .container {
         max-width: 1500px;
         width: 100%;
     }
-}
+}*/
 
 @media screen and (max-width: 1099px) {
     .carousel-content h1{
