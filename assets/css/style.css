@@ -611,7 +611,7 @@ select {
     transition: all 0.25s ease-in-out;
     -webkit-transform: translateY(36px);
     -ms-transform: translateY(36px);
-    transform: translateY(36px);
+    transform: translateY(0);
     z-index: 200;
     padding: 32px 32px 12px 32px;
 }
@@ -634,6 +634,9 @@ select {
     font-size: 26px;
     letter-spacing: -1px;
 }
+.project-text h2 a:hover {
+    color: var(--primary-color)!important;
+}
 .view-project-btn {
     position: relative;
     font-size: 12px;
@@ -652,51 +655,52 @@ select {
 .project-card::after {
     content: "";
     position: absolute;
-    bottom: -1px;
+    bottom: 0;
     left: 0;
     right: 0;
-    height: 50%;
-    background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#000),to(transparent));
-    background: linear-gradient(0deg,#000 0,transparent 100%);
+    height: 100%;
+    /*background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#000),to(transparent));*/
+    background: rgba(0,0,0,0.5);
 }
 .wwd-card {
     background-color: #ffffff;
     padding: 30px;
     display: flex;
-    gap: 15px;
+    gap: 25px;
     height: 100%;
     border-radius: 15px;
-    /*border: 2px solid var(--primary-color);*/
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    /* border: 2px solid var(--primary-color); */
+    /*box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);*/
     flex-direction: column;
 }
 .wwd-content h3 {
     font-weight: 600;
     margin-bottom: 15px;
-    text-align: center;
-    font-size: 24px;
+    text-align: left;
+    font-size: 34px;
 }
 .wwd-content p {
-    text-align: center;
+    text-align: left;
+
 }
 .wwd-icon {
-    flex: 0 0 120px;
-    width: 120px;
+    flex: 0 0 90px;
+    width: 90px;
     background-color: var(--primary-color);
-    height: 120px;
+    height: 90px;
     border-radius: 10px;
-    margin: auto;
+    margin: 0;
     padding: 10px;
     align-items: center;
     justify-content: center;
     display: flex;
-    border-radius: 15px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
 }
 .wwd-icon img {
-    width: 75px;
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
+    width: 50px;
+     -webkit-filter: invert(100%);
+     filter: invert(100%);
 }
 .social-div a {
     font-size: 34px;
@@ -1414,6 +1418,22 @@ ul.footer-link-ul {
         width: 100%;
     }
 }*/
+.wwd-ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+.wwd-ul li {
+    display: block;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 14px;
+    padding: 2px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: #ffffff;
+}
 
 @media screen and (max-width: 1099px) {
     .carousel-content h1{
