@@ -226,7 +226,8 @@ select {
 }
 .main-header .overlay-menu {
     padding: 100px 20px 0 20px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .main-header .overlay.open {
     opacity: 1;
@@ -270,8 +271,8 @@ select {
     transition: 0.3s;
 }*/
 .main-header  .overlay.open li {
-    animation: fadeInRight .5s ease forwards;
-    animation-delay: .35s;
+    /*animation: fadeInRight .5s ease forwards;*/
+    /*animation-delay: .35s;*/
 }
 .main-header  .overlay.open li:nth-of-type(2) {
     animation-delay: .4s;
@@ -389,10 +390,10 @@ select {
     background-color: transparent;
     color: var(--primary-color);
 }
-.main-header .overlay ul li.dropdown ul li:last-child a:before {
+.main-header .overlay ul li.dropdown ul li a:before {
     display: none;
 }
-.main-header .overlay ul li.dropdown ul li:last-child a:after {
+.main-header .overlay ul li.dropdown ul li a:after {
     display: none;
 }
 .fixed-header {
@@ -440,7 +441,7 @@ select {
     height: 70vh;
 }
 .carousel-div {
-    height: 100vh;
+    height: 90vh;
     background-size: cover;
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -725,8 +726,8 @@ a .project-card:hover .project-text h2 {
 }
 .wwd-icon img {
     width: 50px;
-     -webkit-filter: invert(100%);
-     filter: invert(100%);
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
 .social-div a {
     font-size: 34px;
