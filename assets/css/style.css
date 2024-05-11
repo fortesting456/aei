@@ -26,7 +26,8 @@ body {
     font-family: var(--secondart-font);
 }
 .primary-gradient {
-    background: linear-gradient(90deg,#7952b3 0%,#563d7c 100%);
+    /* background: linear-gradient(90deg,#7952b3 0%,#563d7c 100%); */
+    background: #5f428e;
 }
 .bg-light {
     background-color: var(--lightbg-color);
@@ -708,7 +709,7 @@ a .project-card:hover .project-text h2 {
 
 .project-text h2 {
     margin-bottom: 16px;
-    min-height: 64px;
+    /* min-height: 64px; */
     font-size: 26px;
     letter-spacing: -1px;
 }
@@ -828,7 +829,7 @@ a .project-card:hover .project-text h2 {
     background-color: #fff;
     padding: 15px;
     border-radius: 5px;
-    border: 1px solid #d9d9d9;
+    /* border: 1px solid #d9d9d9; */
     overflow: hidden;
 }
 .acc-img img {
