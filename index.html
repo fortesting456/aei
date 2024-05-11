@@ -50,7 +50,7 @@
 <body>
 
     <!-- Header start -->
-    <header class="main-header">
+    <header class="main-header home-header">
 
         <div class="header-top">
             <div class="container-fluid">
@@ -167,7 +167,7 @@
                             want to join to be given the opportunity to reach their goals while also understanding the
                             demands of our clients and being easy to do business with.
                         </p>
-                        <a class="slider-btn wow fadeInLeft" href="#">Discover a career at Aeonianedge </a>
+                        <!-- <a class="slider-btn wow fadeInLeft" href="#">Discover a career at Aeonianedge </a> -->
                     </div>
                 </div>
             </div>
@@ -430,59 +430,47 @@
 
     <!-- Footer Section Start -->
     <footer class="main-footer wow fadeInUp">
-        <div class="container-fluid">
-            <div class="top-footer ">
-                <div class="d-flex justify-content-center">
-                    <div class="">
+        <div class="container">
+            <div class="top-footer">
+                <div class="row">
+                    <div class="col-md-6">
                         <div class="footer-logo">
                             <a href="index.html">
                                 <img src="assets/img/logo.png" width="300" class="img-fluid">
                             </a>
                         </div>
                     </div>
-                    <!-- <div class="col-md-6">
+                    <div class="col-md-6">
                         <div class="footer-social">
                             <div class="footer-social-div d-flex gap-3 justify-content-end">
-                                <a href="https://www.linkedin.com/company/aeonianedge/"><i
-                                        class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div class="bottom-footer">
                 <div class="footer-link">
-                    <div class="d-flex justify-content-center m-3">
-                        <div class="">
+                    <div class="row">
+                        <div class="col-md-4">
                             <ul class="footer-link-ul">
                                 <li><a href="careers.html">Careers</a></li>
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
-
-                    </div>
-                    <div class="d-flex justify-content-center pb-65">
-                        <p class="text-white address-tag text-center text-md-end mt-2 mt-md-0">
-                            <i class="fas fa-map-marker-alt me-2"></i> 74 Hepscott Terrace, Toronto,
-                            Ontario, M1W 1E1
-                        </p>
+                        <div class="col-md-8">
+                            <p class="text-white address-tag text-center text-md-end mt-2 mt-md-0">
+                                <i class="fas fa-map-marker-alt me-2"></i> 74 Hepscott Terrace, Toronto, Ontario, M1W 1E1
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="bottom-term-div bottom-term-div-new">
-                    <div>
-                        <div>
-                            <ul class="footer-link-ul d-flex justify-content-between align-items-center">
+                <div class="bottom-term-div">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="footer-link-ul">
                                 <li>© aeonianedge 2024</li>
-                                <li>
-                                    <div>
-                                        <div class="footer-social">
-                                            <div class="footer-social-div d-flex gap-3 justify-content-end">
-                                                <a href="https://www.linkedin.com/company/aeonianedge/"><i
-                                                        class="fab fa-linkedin"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+
                             </ul>
                         </div>
 
@@ -508,10 +496,12 @@
         margin: 10,
         autoplay: true,
         autoplayTimeout: 3000,
-        autoplayHoverPause: true,
+        autoplayHoverPause: false,
         animateOut: 'fadeOut',
-        nav: false,
         dots: true,
+        nav: true,
+    navContainer: '.owl-nav', // Specify the container for navigation controls
+    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         responsive: {
             0: {
                 items: 1

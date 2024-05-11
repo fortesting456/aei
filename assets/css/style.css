@@ -132,7 +132,7 @@ input.form-control, select.form-control {
   }
 
   header {
-    background-color: transparent !important;
+    background-color: #000 !important;
     color: white;
     padding: 20px;
     position: fixed !important;
@@ -142,6 +142,10 @@ input.form-control, select.form-control {
     animation: fadeIn 0.5s ease;
     transition: background-color 1s ease;
     border: 0 !important;
+  }
+
+  .home-header {
+    background-color: transparent !important;
   }
 
 
@@ -169,7 +173,7 @@ select {
     /* background-color: #000000; */
 }
 .address-tag {
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 .main-header .container a {
@@ -833,15 +837,12 @@ a .project-card:hover .project-text h2 {
     display: block;
 }
 .main-footer {
-    padding: 70px 0 20px 0;
+    padding: 70px 0;
     background-color: #101216;
 }
 ul.footer-link-ul {
     display: flex;
     gap: 20px;
-}
-.pb-65 {
-    padding-bottom: 65px;
 }
 .footer-link-ul li {
     display: block;
@@ -849,9 +850,8 @@ ul.footer-link-ul {
     color: #ffffff;
     position: relative;
 }
-
 .footer-link-ul li::after {
-    content: '';
+    content: "";
     width: 3px;
     height: 3px;
     background-color: #fff;
@@ -878,13 +878,33 @@ ul.footer-link-ul {
 }
 .main-footer .bottom-footer {
     margin-top: 20px;
-    /* padding-top: 20px; */
-    /* border-top: solid 1px #fff; */
+    padding-top: 40px;
+    border-top: solid 1px #fff;
 }
 .bottom-term-div {
+    padding-top: 40px;
+}
+.footer-social-div a {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 32px;
+    flex: 0 0 50px;
+}
+.footer-social-div a:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* .bottom-term-div {
     padding-top: 20px;
     border-top: solid 1px #816aa4 !important;
-}
+} */
 
 .bottom-term-div-new {
     width: 95%;
@@ -1469,7 +1489,7 @@ margin-bottom: 20px;
 }
 .page-banner-section .carousel-content {
     width: 50%;
-    background-color: #565656;
+    background-color: #fff;
     text-align: left;
     align-items: start;
 }
