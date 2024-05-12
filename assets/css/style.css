@@ -9,9 +9,10 @@
     --lightbg-color: #ececec;
     --primary-font: 'Montserrat', sans-serif;
     /*--secondart-font: 'Volkhov', serif;*/
-    --secondart-font: "Oswald", sans-serif;;
+    --secondart-font: "Oswald", sans-serif;
     /*--secondart-font: 'Inter', sans-serif;*/
     --section-gradient: linear-gradient(90deg,#0164A7 0%,#1C355E 100%);
+    /* --section-gradient: linear-gradient(90deg, #5f428e 0%, #3e2b5c 100%); */
 }
 
 body {
@@ -27,7 +28,8 @@ body {
 }
 .primary-gradient {
     /* background: linear-gradient(90deg,#7952b3 0%,#563d7c 100%); */
-    background: #5f428e;
+    background: linear-gradient(90deg, #503e6c 0%, #472776 100%);
+    ;
 }
 .bg-light {
     background-color: var(--lightbg-color);
@@ -607,6 +609,12 @@ width: 75% !important;
     letter-spacing: -.48px;
     margin-bottom: 20px;
 }
+
+.sub-title-new {
+    font-size: 25px !important;
+    font-weight: 400 !important;
+}
+
 .ops-content h2 {
     font-size: 44px;
     line-height: 48px;
@@ -631,7 +639,7 @@ width: 75% !important;
 }
 .section-btn {
     background-color: var(--primary-color);
-    padding: 15px 15px;
+    padding: 13px 15px;
     border-radius: 5px;
 }
 .section-btn:hover {
