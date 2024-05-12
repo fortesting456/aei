@@ -174,7 +174,7 @@ select {
     /* background-color: #000000; */
 }
 .address-tag {
-    /* font-size: 20px; */
+    font-size: small;
 }
 
 .main-header .container a {
@@ -847,7 +847,7 @@ ul.footer-link-ul {
 }
 .footer-link-ul li {
     display: block;
-    font-size: 14px;
+    font-size: small;
     color: #ffffff;
     position: relative;
 }
@@ -869,7 +869,7 @@ ul.footer-link-ul {
 }
 .footer-link-ul {
     color: #ffffff;
-    font-size: 14px;
+    font-size: small;
 }
 .footer-link-ul a {
     color: #ffffff;
