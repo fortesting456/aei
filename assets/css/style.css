@@ -11,8 +11,8 @@
     /*--secondart-font: 'Volkhov', serif;*/
     --secondart-font: "Oswald", sans-serif;
     /*--secondart-font: 'Inter', sans-serif;*/
-    --section-gradient: linear-gradient(90deg,#0164A7 0%,#1C355E 100%);
-    /* --section-gradient: linear-gradient(90deg, #5f428e 0%, #3e2b5c 100%); */
+    /* --section-gradient: linear-gradient(90deg,#0164A7 0%,#1C355E 100%); */
+    --section-gradient: linear-gradient(90deg, #5f428e 0%, #3e2b5c 100%);
 }
 
 body {
@@ -27,9 +27,8 @@ body {
     font-family: var(--secondart-font);
 }
 .primary-gradient {
-    /* background: linear-gradient(90deg,#7952b3 0%,#563d7c 100%); */
-    background: linear-gradient(90deg, #503e6c 0%, #472776 100%);
-    ;
+    background: linear-gradient(90deg,#7952b3 0%,#573d7e 100%);
+    /* background: #5f428e; */
 }
 .bg-light {
     background-color: var(--lightbg-color);
